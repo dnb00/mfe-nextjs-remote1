@@ -23,7 +23,7 @@ export const Card = styled.div<{ bg?: string }>`
   font-size: 16px;
   font-weight: 700;
   padding: 15px 60px;
-  background-color: ${({ bg }) => bg || '#dae897'};
+  background-color: ${({ bg }) => bg || '#d6ba2a'};
   color: ${({ color }) => color || '#333'};
   transition: all 0.3s ease-in-out;
   height: 300px;
