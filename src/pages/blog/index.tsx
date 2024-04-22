@@ -7,7 +7,7 @@ export default function BlogPage({ people }: { people: any }) {
   return (
     <div style={{ width: '100%' }}>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-       <h1>Pokemon characters </h1>
+       <h1>Pokemon characters v2 </h1>
         {people.results.map((person: any, index: number) => (
           <CardComponent
             key={person.name}
