@@ -7,15 +7,13 @@ export default function BlogPage({ people }: { people: any }) {
   return (
     <div style={{ width: '100%' }}>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-       <h1>Star Wars Characters aaaa</h1>
+       <h1>Pokemon characters </h1>
         {people.results.map((person: any, index: number) => (
           <CardComponent
             key={person.name}
             onClick={() => router.push(`./blog/${index + 1}`)}
           >
             <h2> Name: {person.name}</h2>
-            <p> Height: {person.height}</p>
-            <p> Hair Color: {person.hair_color}</p>
           </CardComponent>
         ))}
       </div>
@@ -24,7 +22,7 @@ export default function BlogPage({ people }: { people: any }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch('https://swapi.dev/api/people');
+  const res = await fetch('https://pokeapi.co/api/v2/pokemon');
   const people = await res.json();
   return { props: { people } };
 };
